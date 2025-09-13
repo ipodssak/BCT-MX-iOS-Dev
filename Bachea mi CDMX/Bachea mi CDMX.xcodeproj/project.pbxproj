@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		705A60A72E74F5650064427D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60A62E74F5650064427D /* FirebaseAuth */; };
+		705A60A92E74F5650064427D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60A82E74F5650064427D /* FirebaseDatabase */; };
+		705A60AB2E74F5650064427D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60AA2E74F5650064427D /* FirebaseFirestore */; };
+		705A60AD2E74F5650064427D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60AC2E74F5650064427D /* FirebaseStorage */; };
+		705A60B12E74F70C0064427D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60B02E74F70C0064427D /* FirebaseFunctions */; };
+		705A60B42E74FAEB0064427D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60B32E74FAEB0064427D /* GoogleSignIn */; };
+		705A60B62E74FAEB0064427D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60B52E74FAEB0064427D /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		705A60942E74EFBC0064427D /* Bachea mi CDMX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bachea mi CDMX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		705A60C02E750F270064427D /* Exceptions for "Bachea mi CDMX" folder in "Bachea mi CDMX" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Bachea-mi-CDMX-Info.plist",
+			);
+			target = 705A60932E74EFBC0064427D /* Bachea mi CDMX */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		705A60962E74EFBC0064427D /* Bachea mi CDMX */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				705A60C02E750F270064427D /* Exceptions for "Bachea mi CDMX" folder in "Bachea mi CDMX" target */,
+			);
+			path = "Bachea mi CDMX";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		705A60912E74EFBC0064427D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705A60A92E74F5650064427D /* FirebaseDatabase in Frameworks */,
+				705A60AD2E74F5650064427D /* FirebaseStorage in Frameworks */,
+				705A60B62E74FAEB0064427D /* GoogleSignInSwift in Frameworks */,
+				705A60B12E74F70C0064427D /* FirebaseFunctions in Frameworks */,
+				705A60A72E74F5650064427D /* FirebaseAuth in Frameworks */,
+				705A60AB2E74F5650064427D /* FirebaseFirestore in Frameworks */,
+				705A60B42E74FAEB0064427D /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		705A608B2E74EFBC0064427D = {
+			isa = PBXGroup;
+			children = (
+				705A60962E74EFBC0064427D /* Bachea mi CDMX */,
+				705A60952E74EFBC0064427D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		705A60952E74EFBC0064427D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				705A60942E74EFBC0064427D /* Bachea mi CDMX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		705A60932E74EFBC0064427D /* Bachea mi CDMX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705A609F2E74EFBD0064427D /* Build configuration list for PBXNativeTarget "Bachea mi CDMX" */;
+			buildPhases = (
+				705A60902E74EFBC0064427D /* Sources */,
+				705A60912E74EFBC0064427D /* Frameworks */,
+				705A60922E74EFBC0064427D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				705A60962E74EFBC0064427D /* Bachea mi CDMX */,
+			);
+			name = "Bachea mi CDMX";
+			packageProductDependencies = (
+				705A60A62E74F5650064427D /* FirebaseAuth */,
+				705A60A82E74F5650064427D /* FirebaseDatabase */,
+				705A60AA2E74F5650064427D /* FirebaseFirestore */,
+				705A60AC2E74F5650064427D /* FirebaseStorage */,
+				705A60B02E74F70C0064427D /* FirebaseFunctions */,
+				705A60B32E74FAEB0064427D /* GoogleSignIn */,
+				705A60B52E74FAEB0064427D /* GoogleSignInSwift */,
+			);
+			productName = "Bachea mi CDMX";
+			productReference = 705A60942E74EFBC0064427D /* Bachea mi CDMX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		705A608C2E74EFBC0064427D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					705A60932E74EFBC0064427D = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 705A608F2E74EFBC0064427D /* Build configuration list for PBXProject "Bachea mi CDMX" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 705A608B2E74EFBC0064427D;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				705A60B22E74FAEB0064427D /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 705A60952E74EFBC0064427D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				705A60932E74EFBC0064427D /* Bachea mi CDMX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		705A60922E74EFBC0064427D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		705A60902E74EFBC0064427D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		705A609D2E74EFBD0064427D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		705A609E2E74EFBD0064427D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		705A60A02E74EFBD0064427D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DZ7DSL7Z6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bachea-mi-CDMX-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideadigital.bacheamiciudad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		705A60A12E74EFBD0064427D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DZ7DSL7Z6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bachea-mi-CDMX-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ideadigital.bacheamiciudad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		705A608F2E74EFBC0064427D /* Build configuration list for PBXProject "Bachea mi CDMX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705A609D2E74EFBD0064427D /* Debug */,
+				705A609E2E74EFBD0064427D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705A609F2E74EFBD0064427D /* Build configuration list for PBXNativeTarget "Bachea mi CDMX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705A60A02E74EFBD0064427D /* Debug */,
+				705A60A12E74EFBD0064427D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+		705A60B22E74FAEB0064427D /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignin-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		705A60A62E74F5650064427D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		705A60A82E74F5650064427D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		705A60AA2E74F5650064427D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		705A60AC2E74F5650064427D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		705A60B02E74F70C0064427D /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		705A60B32E74FAEB0064427D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60B22E74FAEB0064427D /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */;
+			productName = GoogleSignIn;
+		};
+		705A60B52E74FAEB0064427D /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60B22E74FAEB0064427D /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 705A608C2E74EFBC0064427D /* Project object */;
+}
