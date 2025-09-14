@@ -20,7 +20,7 @@ struct HomeView: View {
                 }
                 .tag(0)
             
-            ProfileViewDemo()
+            ProfileView()
                 .tabItem {
                     Image(systemName: selectedTab == 1 ? "person.fill" : "person")
                     Text("Perfil")
