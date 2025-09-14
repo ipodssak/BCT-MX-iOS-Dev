@@ -14,28 +14,16 @@
 		705A60B12E74F70C0064427D /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60B02E74F70C0064427D /* FirebaseFunctions */; };
 		705A60B42E74FAEB0064427D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60B32E74FAEB0064427D /* GoogleSignIn */; };
 		705A60B62E74FAEB0064427D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 705A60B52E74FAEB0064427D /* GoogleSignInSwift */; };
+		70DE237A2E75E1F40092E378 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 70DE23792E75E1F40092E378 /* FirebaseCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		705A60942E74EFBC0064427D /* Bachea mi CDMX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bachea mi CDMX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		705A60C02E750F270064427D /* Exceptions for "Bachea mi CDMX" folder in "Bachea mi CDMX" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Bachea-mi-CDMX-Info.plist",
-			);
-			target = 705A60932E74EFBC0064427D /* Bachea mi CDMX */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		705A60962E74EFBC0064427D /* Bachea mi CDMX */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				705A60C02E750F270064427D /* Exceptions for "Bachea mi CDMX" folder in "Bachea mi CDMX" target */,
-			);
 			path = "Bachea mi CDMX";
 			sourceTree = "<group>";
 		};
@@ -52,6 +40,7 @@
 				705A60B12E74F70C0064427D /* FirebaseFunctions in Frameworks */,
 				705A60A72E74F5650064427D /* FirebaseAuth in Frameworks */,
 				705A60AB2E74F5650064427D /* FirebaseFirestore in Frameworks */,
+				70DE237A2E75E1F40092E378 /* FirebaseCore in Frameworks */,
 				705A60B42E74FAEB0064427D /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +91,7 @@
 				705A60B02E74F70C0064427D /* FirebaseFunctions */,
 				705A60B32E74FAEB0064427D /* GoogleSignIn */,
 				705A60B52E74FAEB0064427D /* GoogleSignInSwift */,
+				70DE23792E75E1F40092E378 /* FirebaseCore */,
 			);
 			productName = "Bachea mi CDMX";
 			productReference = 705A60942E74EFBC0064427D /* Bachea mi CDMX.app */;
@@ -418,6 +408,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 705A60B22E74FAEB0064427D /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		70DE23792E75E1F40092E378 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 705A60A52E74F5650064427D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

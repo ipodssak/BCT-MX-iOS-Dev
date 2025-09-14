@@ -8,21 +8,12 @@
 import SwiftUI
 import FirebaseCore
 import GoogleSignIn
-
-//class AppDelegate: NSObject, UIApplicationDelegate {
-//  func application(_ application: UIApplication,
-//                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//    FirebaseApp.configure()
-//
-//    return true
-//  }
-//}
+import FirebaseCore
+import FirebaseFirestore
 
 @main
 struct Bachea_mi_CDMXApp: App {
     
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
     init() {
         FirebaseApp.configure()
         
@@ -33,6 +24,12 @@ struct Bachea_mi_CDMXApp: App {
         }
         
         GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: clientId)
+        
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = true
+        settings.cacheSizeBytes = FirestoreCacheSizeUnlimited
+        
+        Firestore.firestore().settings = settings
     }
     
     var body: some Scene {

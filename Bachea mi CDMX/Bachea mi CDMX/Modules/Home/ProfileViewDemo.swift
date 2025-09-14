@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-struct HomeView: View {
+struct ProfileViewDemo: View {
     @StateObject private var authManager = FirebaseAuthManager()
     
     var body: some View {
@@ -104,7 +104,7 @@ struct HomeView: View {
                 .padding(.horizontal, 40)
                 .padding(.bottom, 20)
             }
-            .navigationTitle("inicio")
+            .navigationTitle("Perfil")
             .navigationBarTitleDisplayMode(.large)
         }
     }
@@ -140,8 +140,8 @@ struct FeatureCard: View {
     }
 }
 
-struct HomeView_Previous: PreviewProvider {
+struct ProfileDemo_Previous: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ProfileViewDemo()
     }
 }
