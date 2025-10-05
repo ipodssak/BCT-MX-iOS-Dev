@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5652DCE4-8463-4F4D-8330-CB4A9427A85F"
-            shouldBeEnabled = "Yes"
+            uuid = "13903326-FA67-4EF0-A50C-4CDC033AE7EC"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bachea mi CDMX/Utils/FirebaseService.swift"
+            filePath = "Bachea mi CDMX/Utils/FirebaseAuthManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "fetchMunicipalities(completion:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "checkUserExist(user:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

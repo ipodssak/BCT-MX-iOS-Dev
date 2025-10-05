@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct Municipality: Identifiable, Codable {
     let id = UUID()
@@ -56,4 +57,38 @@ extension Municipality {
 
 extension GeneralStatistics {
     static let sampleData = GeneralStatistics(totalReports: 346, totalMunicipalities: 16, averageReports: 21.6, leadingMunicipality: "Naucalpan de Juarez", leadingReport: 170)
+}
+
+// MARK: - User Model for Firestore
+struct AppUser: Codable {
+    let authProvider: String
+    let email: String
+    let lastUpdated: Timestamp
+    let name: String
+    let profileImageUrl: String
+    let registrationDate: Timestamp
+    let totalDonations: Int
+    let totalLocations: Int
+    let totalReports: Int
+    let uid: String
+    
+    init(authProvider: String, email: String, name: String, profileImageUrl: String, uid: String) {
+        self.authProvider = authProvider
+        self.email = email
+        self.name = name
+        self.profileImageUrl = profileImageUrl
+        self.uid = uid
+        self.lastUpdated = Timestamp(date: Date())
+        self.registrationDate = Timestamp(date: Date())
+        self.totalDonations = 0
+        self.totalLocations = 0
+        self.totalReports = 0
+    }
+    
+    // Método para actualizar la fecha de última actualización
+    func withUpdatedTimestamp() -> AppUser {
+        var updatedUser = self
+        updatedUser = AppUser(authProvider: authProvider, email: email, name: name, profileImageUrl: profileImageUrl, uid: uid)
+        return updatedUser
+    }
 }

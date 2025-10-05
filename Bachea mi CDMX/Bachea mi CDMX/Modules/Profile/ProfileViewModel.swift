@@ -68,8 +68,10 @@ class ProfileViewModel: NSObject, ObservableObject {
     }
     
     private func handleShakeDetected() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.requestLocation()
+        DispatchQueue.main.async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager.requestLocation()
+            }
         }
     }
     

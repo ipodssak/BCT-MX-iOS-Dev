@@ -159,11 +159,155 @@ class FirebaseService {
                 completion(.success(statistics))
             }
     }
+    
+    
+    // MARK: - User Management Methods
+    
+    func getUsers(uid: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        do {
+            db.collection("users").document(uid).getDocument { [weak self] documentSnapshot, error in
+                if let error = error {
+                    completion(.failure(error))
+                    print("ERROR")
+                }
+                
+                guard let document = documentSnapshot else {
+                    completion(.success(false))
+                    print("NOT DOCUMENT")
+                    return
+                }
+                
+                if document.exists {
+                    completion(.success(true))
+                    print("USER EXIST")
+                } else {
+                    completion(.success(false))
+                }
+            }
+        }
+    }
+    
+    /// Registra un nuevo usuario en Firestore
+    func createUser(_ user: AppUser, completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            let userData = try Firestore.Encoder().encode(user)
+            print("✅ Datos del usuario codificados correctamente")
+            
+            // Crear el documento del usuario
+            db.collection("users")
+                .document(user.uid)
+                .setData(userData) { error in
+                    if let error = error {
+                        print("❌ Error creando documento de usuario: \(error.localizedDescription)")
+                        completion(.failure(error))
+                    } else {
+                        // Crear subcolección locations dentro del documento del usuario
+                        self.createLocationsSubcollection(for: user.uid) { result in
+                            switch result {
+                            case .success:
+                                completion(.success(()))
+                            case .failure(let error):
+                                print("❌ Error creando subcolección locations: \(error.localizedDescription)")
+                                completion(.failure(error))
+                            }
+                        }
+                    }
+                }
+        } catch {
+            print("❌ Error codificando datos del usuario: \(error.localizedDescription)")
+            completion(.failure(error))
+        }
+    }
+    
+    /// Crea la subcolección locations para un usuario
+    private func createLocationsSubcollection(for uid: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        // Crear un documento inicial en la subcolección locations
+        let initialLocationData: [String: Any] = [
+            "createdAt": Timestamp(date: Date()),
+            "updatedAt": Timestamp(date: Date()),
+            "isInitialDocument": true
+        ]
+        
+        db.collection("users")
+            .document(uid)
+            .collection("locations")
+            .document("initial")
+            .setData(initialLocationData) { error in
+                if let error = error {
+                    print("❌ Error creando documento inicial en locations: \(error.localizedDescription)")
+                    completion(.failure(error))
+                } else {
+                    completion(.success(()))
+                }
+            }
+    }
+    
+    /// Verifica si un usuario ya existe en Firestore
+    func userExists(uid: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        db.collection("users")
+            .document(uid)
+            .getDocument { document, error in
+                if let error = error {
+                    print("❌ Error verificando usuario en Firestore: \(error.localizedDescription)")
+                    completion(.failure(error))
+                } else {
+                    let exists = document?.exists ?? false
+                    print("📊 Usuario \(exists ? "EXISTE" : "NO EXISTE") en Firestore")
+                    completion(.success(exists))
+                }
+            }
+    }
+    
+    /// Obtiene los datos de un usuario específico
+    func getUser(uid: String, completion: @escaping (Result<AppUser, Error>) -> Void) {
+        db.collection("users")
+            .document(uid)
+            .getDocument { document, error in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                
+                guard let document = document, document.exists,
+                      let data = document.data() else {
+                    completion(.failure(FirebaseError.documentNotFound))
+                    return
+                }
+                
+                do {
+                    let user = try Firestore.Decoder().decode(AppUser.self, from: data)
+                    completion(.success(user))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+    }
+    
+    /// Actualiza los datos de un usuario existente
+    func updateUser(_ user: AppUser, completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            let userData = try Firestore.Encoder().encode(user)
+            db.collection("users")
+                .document(user.uid)
+                .updateData(userData) { error in
+                    if let error = error {
+                        completion(.failure(error))
+                    } else {
+                        completion(.success(()))
+                    }
+                }
+        } catch {
+            completion(.failure(error))
+        }
+    }
 }
+
 
 enum FirebaseError: Error, LocalizedError {
     case documentNotFound
     case invalidData
+    case userAlreadyExists
+    case userCreationFailed
     
     var errorDescription: String? {
         switch self {
@@ -171,6 +315,10 @@ enum FirebaseError: Error, LocalizedError {
             return "Document not found"
         case .invalidData:
             return "Invalid data format"
+        case .userAlreadyExists:
+            return "User already exists"
+        case .userCreationFailed:
+            return "Failed to create user"
         }
     }
 }

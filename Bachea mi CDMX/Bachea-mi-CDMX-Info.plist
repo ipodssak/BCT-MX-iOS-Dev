@@ -15,5 +15,9 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Esta aplicación necesita acceso a tu ubicación para reportar baches automáticamente y mostrarte mapas interactivos con reportes cercanos.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Esta aplicación necesita acceso a tu ubicación para reportar baches automáticamente y mostrarte mapas interactivos con reportes cercanos.</string>
 </dict>
 </plist>

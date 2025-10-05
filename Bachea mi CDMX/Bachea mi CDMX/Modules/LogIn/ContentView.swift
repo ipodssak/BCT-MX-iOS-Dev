@@ -9,21 +9,8 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    @StateObject private var authManager = FirebaseAuthManager()
-    
     var body: some View {
-        Group {
-            if authManager.isSignedIn {
-                HomeView()
-                    .environmentObject(authManager)
-            } else {
-                LoginView()
-                    .environmentObject(authManager)
-            }
-        }
-        .onAppear{
-            authManager.isSignedIn = Auth.auth().currentUser != nil
-        }
+        MainAppView()
     }
 }
 
